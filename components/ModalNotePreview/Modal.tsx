@@ -14,15 +14,15 @@ const Modal = ({ children }: Props) => {
   
   const close = () => router.back();
 
-  return createPortal (
+  return createPortal(
     <div className={css.backdrop}>
       <div className={css.modal}>
         {children}
         <button onClick={close}>Close</button>
       </div>
-    </div>
-  ),
-    document.body;
+    </div>,
+    document.body
+  );
 };
 
 export default Modal;
