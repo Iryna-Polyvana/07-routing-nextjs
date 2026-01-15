@@ -8,6 +8,7 @@ type FetchNotesParams = {
     page: number;
     perPage: number;
     search?: string;
+    tag?: string;
 }
 
 export type FetchNotesResponse = {

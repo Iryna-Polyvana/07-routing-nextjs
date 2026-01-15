@@ -24,4 +24,3 @@ const NoteDetails = async ({ params }: Props) => {
 }
 
 export default NoteDetails;
-
