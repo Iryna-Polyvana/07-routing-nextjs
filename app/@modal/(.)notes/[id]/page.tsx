@@ -1,6 +1,5 @@
-import css from './page.module.css'
 import { fetchNoteById } from '@/lib/api';
-import NotesPreviewClient from './NotesPreviewClient';
+import NotePreviewClient from './NotePreview.client';
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
 
 type Props = {
@@ -18,7 +17,7 @@ const NotePreview = async ({ params }: Props) => {
 
 
   return <HydrationBoundary state={dehydrate(queryClient)}>
-          <NotesPreviewClient />
+          <NotePreviewClient />
         </HydrationBoundary>
 };
 

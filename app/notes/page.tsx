@@ -1,5 +1,5 @@
 import { fetchNotes } from '@/lib/api';
-import NotesClient from './filter/[...slug]/NotesClient';
+import NotesClient from './filter/[...slug]/Notes.client';
 import { QueryClient } from '@tanstack/react-query';
 
 const NotesPage = async (): Promise<JSX.Element> => {
