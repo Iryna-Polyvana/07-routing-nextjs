@@ -1,4 +1,3 @@
-import { NotesToolbar } from '@/components/NotesToolbar/NotesToolbar';
 import css from './layout.module.css'
 type Props = {
     children: React.ReactNode;
@@ -10,7 +9,6 @@ const NotesLayout = ({ children, sidebar }: Props) => {
         <section className={css.container}>
             <aside className={css.sidebar}>{sidebar}</aside>
             <div className={css.notesWrapper}>
-                <NotesToolbar />
                 {children}
             </div>
         </section>

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import css from './NotesPreviewClient.module.css';
 import { useParams } from 'next/navigation';
 import { fetchNoteById } from '@/lib/api';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Modal from '@/components/ModalNotePreview/Modal';
 
 const NotesPreviewClient = () => {
