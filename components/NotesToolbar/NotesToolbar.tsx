@@ -7,32 +7,29 @@ import NoteForm from '../NoteForm/NoteForm';
 import { useState } from 'react';
 
 interface NotesToolbarProps {
-    search: string;
-    onSearchChange: (value: string) => void;
+  search: string;
+  onSearchChange: (value: string) => void;
 }
 
-export default function NotesToolbar({search, onSearchChange}:NotesToolbarProps) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+export default function NotesToolbar({
+  search,
+  onSearchChange,
+}: NotesToolbarProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    return (
-        <div className={css.toolbar}>
-            <SearchBox
-                value={search}
-                onChange={onSearchChange}
-            />
+  return (
+    <div className={css.toolbar}>
+      <SearchBox value={search} onChange={onSearchChange} />
 
-            <button
-                className={css.button}
-                onClick={() => setIsModalOpen(true)}
-            >
-                Create note +
-            </button>
+      <button className={css.button} onClick={() => setIsModalOpen(true)}>
+        Create note +
+      </button>
 
-            {isModalOpen && (
-                <Modal onClose={() => setIsModalOpen(false)}>
-                    <NoteForm onClose={() => setIsModalOpen(false)} />
-                </Modal>
-            )}
-        </div>
-    );
+      {isModalOpen && (
+        <Modal onClose={() => setIsModalOpen(false)}>
+          <NoteForm onClose={() => setIsModalOpen(false)} />
+        </Modal>
+      )}
+    </div>
+  );
 }

@@ -11,7 +11,7 @@ type Props = {
 
 const Modal = ({ children }: Props) => {
   const router = useRouter();
-  
+
   const close = () => router.back();
 
   return createPortal(
@@ -26,4 +26,3 @@ const Modal = ({ children }: Props) => {
 };
 
 export default Modal;
-
